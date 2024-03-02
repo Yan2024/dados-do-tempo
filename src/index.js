@@ -1,6 +1,12 @@
 const chaveDaApi = "917cef81a7eb44b090230628232511"; 
-
+const pesquisa = document.getElementById("ipesquisa")
 const $botaoDePesquisa = document.querySelector(".botao")
+
+// Para deixar o campo de pesquisa focado ao carregar o HTML da página
+
+document.addEventListener("DOMContentLoaded", () => {
+    pesquisa.focus()
+});
 
 document.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
@@ -8,10 +14,12 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
+// Após o botão ser pressionado, é liberado 
 $botaoDePesquisa.addEventListener("click", async () => {
-    const cidade = document.getElementById("ipesquisa").value;
+    const cidade = pesquisa.value;
 
-    document.getElementById("ipesquisa").value = "" 
+    pesquisa.value = ""
+    pesquisa.blur()
 
     const dados = await buscarDadosDaCidade(cidade); 
     
