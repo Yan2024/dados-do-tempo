@@ -2,6 +2,12 @@ const chaveDaApi = "917cef81a7eb44b090230628232511";
 
 const $botaoDePesquisa = document.querySelector(".botao")
 
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        $botaoDePesquisa.click(); // Simula o clique no botão
+    }
+});
+
 $botaoDePesquisa.addEventListener("click", async () => {
     const cidade = document.getElementById("ipesquisa").value;
 
