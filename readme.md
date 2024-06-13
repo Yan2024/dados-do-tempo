@@ -1,4 +1,4 @@
-# Projeto Login Responsivo
+# Projeto Dados do Tempo
 O site se trata de um campo de pesquisa o qual o usuário preenche com o nome de uma cidade e o na tela são retornadas informações como clima, temperatura, velocidade do vento, etc. Foi utilizada a Weather API para colher as informações necessárias.
 
 ## Tecnologias Envolvidas
